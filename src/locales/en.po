@@ -17,18 +17,26 @@ msgstr ""
 msgid "Chinese Simplified"
 msgstr "Chinese Simplified"
 
+#: src/components/sentry.tsx:21
+msgid "Client Error"
+msgstr "Client Error"
+
 #: src/components/i18n/switcher.tsx:10
 msgid "English"
 msgstr "English"
 
-#: src/pages/index.tsx:19
+#: src/pages/index.tsx:21
 msgid "Genesis"
 msgstr "Genesis"
 
-#: src/pages/index.tsx:27
+#: src/components/sentry.tsx:29
+msgid "Server Error"
+msgstr "Server Error"
+
+#: src/pages/index.tsx:29
 msgid "The Birthplace of Breakthrough Ideas"
 msgstr "The Birthplace of Breakthrough Ideas"
 
-#: src/pages/index.tsx:24
+#: src/pages/index.tsx:26
 msgid "Welcome to Genesis!"
 msgstr "Welcome to Genesis!"
