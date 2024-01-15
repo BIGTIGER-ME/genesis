@@ -13,30 +13,34 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/i18n/switcher.tsx:11
+#: src/components/i18n/switcher.tsx:12
 msgid "Chinese Simplified"
 msgstr "Chinese Simplified"
 
-#: src/components/sentry.tsx:21
+#: src/components/sentry.tsx:22
 msgid "Client Error"
 msgstr "Client Error"
 
-#: src/components/i18n/switcher.tsx:10
+#: src/components/i18n/switcher.tsx:11
 msgid "English"
 msgstr "English"
 
-#: src/pages/index.tsx:21
+#: src/pages/index.tsx:33
 msgid "Genesis"
 msgstr "Genesis"
 
-#: src/components/sentry.tsx:29
+#: src/components/sentry.tsx:30
 msgid "Server Error"
 msgstr "Server Error"
 
-#: src/pages/index.tsx:29
+#: src/components/styled-text.tsx:18
+msgid "Styled by <0>hooks</0>"
+msgstr "Styled by <0>hooks</0>"
+
+#: src/pages/index.tsx:41
 msgid "The Birthplace of Breakthrough Ideas"
 msgstr "The Birthplace of Breakthrough Ideas"
 
-#: src/pages/index.tsx:26
+#: src/pages/index.tsx:38
 msgid "Welcome to Genesis!"
 msgstr "Welcome to Genesis!"

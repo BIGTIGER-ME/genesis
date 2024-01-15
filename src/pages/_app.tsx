@@ -1,5 +1,6 @@
 import App, { AppProps, AppContext, AppInitialProps } from 'next/app'
 import { Messages } from '@lingui/core'
+import * as Theme from 'components/theme'
 import * as I18n from 'components/i18n'
 import { loadCatalog } from 'utils/lingui'
 import 'styles/globals.css'
@@ -12,9 +13,11 @@ type Props = AppProps & AppOwnProps
 
 function MyApp({ Component, messages, pageProps }: Props) {
   return (
-    <I18n.Provider messages={messages}>
-      <Component {...pageProps} />
-    </I18n.Provider>
+    <Theme.Provider>
+      <I18n.Provider messages={messages}>
+        <Component {...pageProps} />
+      </I18n.Provider>
+    </Theme.Provider>
   )
 }
 

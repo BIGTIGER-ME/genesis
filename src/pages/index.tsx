@@ -4,12 +4,24 @@ import Head from 'next/head'
 import { useLingui } from '@lingui/react'
 import * as I18n from 'components/i18n'
 import * as Sentry from 'components/sentry'
+import * as Theme from 'components/theme'
+import StyledText from 'components/styled-text'
 import styles from './index.module.scss'
 
 const libs = [
   { name: 'Next.js', link: 'https://nextjs.org' },
   { name: 'Lingui', link: 'https://lingui.dev', extra: <I18n.Switcher /> },
-  { name: 'Sentry', link: 'https://sentry.io', extra: <Sentry.ThrowError /> }
+  { name: 'Sentry', link: 'https://sentry.io', extra: <Sentry.ThrowError /> },
+  {
+    name: 'BaseUI',
+    link: 'https://baseweb.design',
+    extra: (
+      <>
+        <Theme.Switcher />
+        <StyledText className={styles.styled} />
+      </>
+    )
+  }
 ]
 
 const Index: NextPage = () => {

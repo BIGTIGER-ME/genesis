@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { msg } from '@lingui/macro'
 import { MessageDescriptor } from '@lingui/core'
 import { useLingui } from '@lingui/react'
+import { Select, SIZE } from 'baseui/select'
 
 type LOCALES = 'en' | 'zh_cn' | 'pseudo'
 
@@ -17,20 +18,21 @@ export default function Switcher() {
   const [locale, setLocale] = useState<LOCALES>(router.locale!.split('-')[0] as LOCALES)
 
   return (
-    <select
-      value={locale}
-      onChange={e => {
-        const locale = e.target.value as LOCALES
+    <Select
+      size={SIZE.mini}
+      clearable={false}
+      value={locale ? [{ id: locale }] : []}
+      options={Object.keys(languages).map(locale => ({
+        label: i18n._(languages[locale as LOCALES]),
+        id: locale
+      }))}
+      onChange={params => {
+        if (!params.option) return
+        const locale = params.option.id as LOCALES
 
         setLocale(locale)
         router.push(router.pathname, router.pathname, { locale })
       }}
-    >
-      {Object.keys(languages).map(locale => (
-        <option key={locale} value={locale}>
-          {i18n._(languages[locale as LOCALES])}
-        </option>
-      ))}
-    </select>
+    />
   )
 }

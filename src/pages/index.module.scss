@@ -1,3 +1,5 @@
+@import '~styles/varibles.scss';
+
 .root {
   height: 100vh;
   display: flex;
@@ -23,4 +25,8 @@
       column-gap: 5px;
     }
   }
+}
+
+.styled {
+  color: $baseui-colors-accent600;
 }
