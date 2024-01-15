@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/i18n/switcher.tsx:11
+#: src/components/i18n/switcher.tsx:12
 msgid "Chinese Simplified"
 msgstr "中文简体"
 
@@ -21,11 +21,11 @@ msgstr "中文简体"
 msgid "Client Error"
 msgstr "客户端异常"
 
-#: src/components/i18n/switcher.tsx:10
+#: src/components/i18n/switcher.tsx:11
 msgid "English"
 msgstr "英文"
 
-#: src/pages/index.tsx:21
+#: src/pages/index.tsx:24
 msgid "Genesis"
 msgstr "创世纪"
 
@@ -33,10 +33,10 @@ msgstr "创世纪"
 msgid "Server Error"
 msgstr "服务端异常"
 
-#: src/pages/index.tsx:29
+#: src/pages/index.tsx:32
 msgid "The Birthplace of Breakthrough Ideas"
 msgstr "突破性创意的诞生地"
 
-#: src/pages/index.tsx:26
+#: src/pages/index.tsx:29
 msgid "Welcome to Genesis!"
 msgstr "欢迎来到创世纪!"

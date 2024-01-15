@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { msg } from '@lingui/macro'
 import { MessageDescriptor } from '@lingui/core'
 import { useLingui } from '@lingui/react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'components/ui/select'
 
 type LOCALES = 'en' | 'zh_cn' | 'pseudo'
 
@@ -17,20 +18,23 @@ export default function Switcher() {
   const [locale, setLocale] = useState<LOCALES>(router.locale!.split('-')[0] as LOCALES)
 
   return (
-    <select
+    <Select
       value={locale}
-      onChange={e => {
-        const locale = e.target.value as LOCALES
-
-        setLocale(locale)
+      onValueChange={locale => {
+        setLocale(locale as LOCALES)
         router.push(router.pathname, router.pathname, { locale })
       }}
     >
-      {Object.keys(languages).map(locale => (
-        <option key={locale} value={locale}>
-          {i18n._(languages[locale as LOCALES])}
-        </option>
-      ))}
-    </select>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        {Object.keys(languages).map(locale => (
+          <SelectItem key={locale} value={locale}>
+            {i18n._(languages[locale as LOCALES])}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   )
 }

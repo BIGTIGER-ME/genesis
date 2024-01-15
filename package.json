@@ -15,10 +15,18 @@
   "dependencies": {
     "@lingui/core": "^4.1.2",
     "@lingui/react": "^4.1.2",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-slot": "^1.0.2",
     "@sentry/nextjs": "^7.93.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "next": "13.4.19",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@lingui/cli": "^4.1.2",
@@ -27,10 +35,12 @@
     "@lingui/swc-plugin": "4.0.4",
     "@swc/core": "1.3.80",
     "@types/react": "^18.0.14",
+    "autoprefixer": "^10.4.16",
     "eslint": "8.35.0",
     "eslint-config-next": "12.3.4",
+    "postcss": "^8.4.33",
     "prettier": "^3.1.1",
-    "sass": "^1.69.7",
+    "tailwindcss": "^3.4.1",
     "typescript": "^4.7.4"
   }
 }

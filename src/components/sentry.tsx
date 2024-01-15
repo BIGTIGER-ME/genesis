@@ -1,10 +1,11 @@
 import { Trans } from '@lingui/macro'
 import * as Sentry from '@sentry/nextjs'
+import { Button } from 'components/ui/button'
 
 export function ThrowError() {
   return (
     <>
-      <button
+      <Button
         type="button"
         onClick={() => {
           Sentry.startSpan(
@@ -19,15 +20,15 @@ export function ThrowError() {
         }}
       >
         <Trans>Client Error</Trans>
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
         onClick={async () => {
           await fetch('/api/error')
         }}
       >
         <Trans>Server Error</Trans>
-      </button>
+      </Button>
     </>
   )
 }

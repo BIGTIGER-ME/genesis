@@ -1,0 +1,23 @@
+.root {
+  @apply h-screen flex flex-col items-center justify-center text-center;
+}
+
+.title {
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+}
+
+.desc {
+  @apply leading-7 m-6;
+}
+
+.list {
+  @apply text-left;
+
+  li {
+    @apply mb-1;
+
+    .item {
+      @apply flex items-center gap-x-[5px];
+    }
+  }
+}

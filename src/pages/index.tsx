@@ -4,12 +4,15 @@ import Head from 'next/head'
 import { useLingui } from '@lingui/react'
 import * as I18n from 'components/i18n'
 import * as Sentry from 'components/sentry'
-import styles from './index.module.scss'
+import * as Theme from 'components/theme'
+import { cn } from 'utils/shadcn-ui'
+import styles from './index.module.css'
 
 const libs = [
   { name: 'Next.js', link: 'https://nextjs.org' },
   { name: 'Lingui', link: 'https://lingui.dev', extra: <I18n.Switcher /> },
-  { name: 'Sentry', link: 'https://sentry.io', extra: <Sentry.ThrowError /> }
+  { name: 'Sentry', link: 'https://sentry.io', extra: <Sentry.ThrowError /> },
+  { name: 'shadcn/ui', link: 'https://ui.shadcn.com/', extra: <Theme.Switcher /> }
 ]
 
 const Index: NextPage = () => {
@@ -25,10 +28,10 @@ const Index: NextPage = () => {
         <h1 className={styles.title}>
           <Trans>Welcome to Genesis!</Trans>
         </h1>
-        <p>
+        <p className={styles.desc}>
           <Trans>The Birthplace of Breakthrough Ideas</Trans>
         </p>
-        <ul className={styles.list}>
+        <ul className={cn(styles.list, 'list-disc')}>
           {libs.map((item, i) => (
             <li key={i}>
               <div className={styles.item}>
